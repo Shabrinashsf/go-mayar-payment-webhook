@@ -25,7 +25,7 @@ func SendMayarInvoice(invoice dto.MayarInvoice) (map[string]interface{}, error) 
 		return nil, err
 	}
 
-	req, err := http.NewRequest("POST", urlMayar, bytes.NewBuffer(data))
+	req, err := http.NewRequest("POST", urlMayar, bytes.NewBuffer(body))
 	if err != nil {
 		return nil, err
 	}
